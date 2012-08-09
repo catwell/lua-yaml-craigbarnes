@@ -58,7 +58,7 @@ History
 * Initial release
 
 [License]
--------
+---------
 
 Copyright (c) 2012, Craig Barnes.
 Copyright (c) 2009, Andrew Danforth.
@@ -93,7 +93,7 @@ Thanks to the following people for suggestions and patches:
 
 Portions of this software were inspired by Ingy döt Net's [YAML::LibYAML].
 
-[YAML]:          http://yaml.org/ "YAML Ain't Markup Language"
-[LibYAML]:       http://pyyaml.org/wiki/LibYAML "YAML library written in C"
-[License]:       http://en.wikipedia.org/wiki/MIT_License "MIT license"
+[YAML]: http://yaml.org/ "YAML Ain't Markup Language"
+[LibYAML]: http://pyyaml.org/wiki/LibYAML "YAML library written in C"
+[License]: http://en.wikipedia.org/wiki/MIT_License "MIT license"
 [YAML::LibYAML]: http://search.cpan.org/~nuffin/YAML-LibYAML "YAML Perl Module"
