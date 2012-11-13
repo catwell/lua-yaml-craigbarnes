@@ -5,7 +5,20 @@ Lua [YAML] serialization using [LibYAML].
 Installation
 ------------
 
-    make && sudo make install PREFIX=/usr/local
+The following will build and install to the default location (`/usr/local`):
+
+    make
+    sudo make install
+
+To change the installation prefix to `/usr` use:
+
+    make
+    sudo make install PREFIX=/usr
+
+The Makefile also supports the [DESTDIR] convention, which packagers may
+find useful for installing into a "buildroot".
+
+[DESTDIR]: http://www.gnu.org/prep/standards/html_node/DESTDIR.html
 
 Usage
 -----
