@@ -31,12 +31,11 @@ rockspec: yaml-$(VERSION)-1.rockspec
 yaml-%-1.rockspec: rockspec.in
 	sed 's/%VERSION%/$*/g' $< > $@
 
-check: yaml.so test.lua rockspec
-	@luarocks lint *.rockspec
+test: yaml.so test.lua
 	@lua test.lua
 
 clean:
 	rm -f yaml.so *.o *.tar.gz *.rock *.rockspec
 
 
-.PHONY: install uninstall dist rock rockspec check clean
+.PHONY: install uninstall dist rock rockspec test clean
