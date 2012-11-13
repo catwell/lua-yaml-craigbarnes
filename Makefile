@@ -2,8 +2,8 @@ VERSION = 0.3.1
 PREFIX  = /usr/local
 LIBDIR  = $(PREFIX)/lib/lua/5.1
 CC      = gcc
-CFLAGS  = -O2 -Wall
-LDFLAGS = -shared -fPIC
+CFLAGS  = -O2 -Wall -fPIC $(XCFLAGS)
+LDFLAGS = -shared
 LDLIBS  = -lyaml
 
 yaml.so: lyaml.o b64.o
