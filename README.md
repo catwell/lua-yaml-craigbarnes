@@ -60,8 +60,7 @@ History
 [License]
 ---------
 
-Copyright (c) 2012, Craig Barnes.
-Copyright (c) 2009, Andrew Danforth.
+Copyright (c) 2009-2012, Andrew Danforth.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
