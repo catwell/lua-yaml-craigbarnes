@@ -4,12 +4,10 @@ LIBDIR  = $(PREFIX)/lib/lua/5.1
 CC      = gcc
 
 UNAME=$(shell uname)
-_Linux_cflags=-fPIC
-_Darwin_cflags=
 _Linux_ldflags=-shared
 _Darwin_ldflags=-undefined dynamic_lookup -dynamiclib
 
-CFLAGS  = -O2 -Wall $(_$(UNAME)_cflags) $(XCFLAGS)
+CFLAGS  = -O2 -Wall $(XCFLAGS)
 LDFLAGS = $(_$(UNAME)_ldflags)
 LDLIBS  = -lyaml
 
@@ -17,6 +15,7 @@ yaml.so: lyaml.o b64.o
 	$(CC) $(LDFLAGS) $(LDLIBS) -o $@ $^
 
 install: yaml.so
+	mkdir -p $(DESTDIR)$(LIBDIR)
 	install -pm0755 $< $(DESTDIR)$(LIBDIR)/$<
 
 uninstall:
