@@ -2,14 +2,13 @@ VERSION = 0.3.1
 PREFIX  = /usr/local
 LIBDIR  = $(PREFIX)/lib/lua/5.1
 CC      = gcc
-
-UNAME=$(shell uname)
-_Linux_ldflags=-shared
-_Darwin_ldflags=-undefined dynamic_lookup -dynamiclib
-
 CFLAGS  = -O2 -Wall $(XCFLAGS)
-LDFLAGS = $(_$(UNAME)_ldflags)
+LDFLAGS = -shared
 LDLIBS  = -lyaml
+
+ifeq ($(shell uname),Darwin)
+  LDFLAGS = -undefined dynamic_lookup -dynamiclib
+endif
 
 yaml.so: lyaml.o b64.o
 	$(CC) $(LDFLAGS) $(LDLIBS) -o $@ $^
